@@ -1,0 +1,19 @@
+{
+  "name": "test_coordinates",
+  "version": "1.0.0",
+  "description": "simulador de cordenada de um drone",
+  "main": "dist/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jusan Magno",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "swagger-ui-express": "^4.1.6",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7"
+  }
+}
