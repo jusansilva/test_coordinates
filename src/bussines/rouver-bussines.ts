@@ -1,6 +1,5 @@
 
 export class RouverBussines {
-
     public async moveRouver(zone: string, rouver: object[]): Promise<object> {
         const zoneWork = zone.split(" ");
         const output = Promise.all(rouver.map(async (cord, index) => {

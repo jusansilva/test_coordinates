@@ -21,6 +21,9 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "@types/node": "^16.11.7"
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7"
   }
 }
