@@ -10,3 +10,5 @@ const RouverRouter = Router();
 RouverRouter.route("/rouver/move").post(RouteValidator.validate(PostInputValidator.post()),(req: Request, res: Response, next: NextFunction)=>{
     return controller.moveRouver(req, res, next)
 })
+
+export { RouverRouter }
