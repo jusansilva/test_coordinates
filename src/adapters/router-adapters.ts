@@ -11,8 +11,9 @@ export class AdapterRouters {
             const swaggerDocument = YAMLJS.load('./swagger.yml');
             const router = Router();
             router.use("^/$", (req, res) => { return res.redirect('/api-docs')});
-            router.user('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+            router.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
             router.use('/api', api)
+            app.use(router);
         } catch (error) {
             console.log(error)
         }
@@ -35,3 +36,5 @@ export class AdapterRouters {
         })
     }
 }
+
+export { api }

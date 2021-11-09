@@ -3,8 +3,7 @@ import { SchemaValidator } from '../validations';
 
 const InputValidator = Joi.object({
     zone: Joi.string(),
-    rouver: Joi.array(), 
-    command: Joi.array()
+    rouvers: Joi.array()
 })
 
 export class PostInputValidator {

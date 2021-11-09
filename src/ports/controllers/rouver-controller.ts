@@ -6,14 +6,15 @@ import { RouverBussines } from '../../bussines';
 @Service()
 export class RouverController {
     private bussines: RouverBussines;
+    
     constructor(){
         this.bussines = Container.get(RouverBussines);
     }
 
     async moveRouver(req: Request, res: Response, next: NextFunction){
         try {
-            const {zone, rouvers, command } = req.body;
-            const output = await this.bussines.moveRouver(zone, rouvers, command)
+            const {zone, rouvers } = req.body;
+            const output = await this.bussines.moveRouver(zone, rouvers)
             res.json(output);
         } catch (error) {
             return next(error)

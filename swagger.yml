@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  description: 'API simulador de cordenada de um drone'
+  version: '1.0.0'
+  title: 'Test Coordinates'
+  contact:
+    email: 'jusanmagno@gmail.com'
+  license:
+    name: 'Apache 2.0'
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: 'Rouver'
+    description: 'Rouver routes related'
+  - name: 'Rouver Move'
+paths:
+  /api/rouver/move:
+    post:
+      tags:
+        - 'Rouver'
+      summary: return the coordinates of a rouver
+      description: return the coordinates of a rouver
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                zone:
+                  type: string
+                  example: '5 5'
+                rouvers:
+                  type: array
+                  example: [{"rouver" : "1 2 N", "command" : "LMLMLMLMM"}, {"rouver" : "3 3 E", "command" : "MMRMMRMRRM"} ]
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Auth'
